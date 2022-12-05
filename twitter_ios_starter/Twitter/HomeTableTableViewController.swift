@@ -15,7 +15,6 @@ class HomeTableTableViewController: UITableViewController {
     let myRefreshControl = UIRefreshControl()
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadTweets()

@@ -10,19 +10,18 @@ import UIKit
 
 class TweetCellTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var timeStampLabel: UILabel!
+    @IBOutlet weak var screenNameLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
-    
     @IBOutlet weak var userNameLabel: UILabel!
-    
     @IBOutlet weak var tweetContent: UILabel!
-    
     @IBOutlet weak var greyFavButton: UIButton!
+    @IBOutlet weak var greyRetButton: UIButton!
     
     var favorited:Bool = false
     var tweetId:Int = -1
     
-    @IBOutlet weak var greyRetButton: UIButton!
-    
+     
     @IBAction func favoriteTweet(_ sender: Any) {
         let toBeFavorited = !favorited
         if (toBeFavorited) {
@@ -74,12 +73,13 @@ class TweetCellTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        imageView?.layer.cornerRadius = 5
+        imageView?.clipsToBounds = true
         // Initialization code
     }    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 

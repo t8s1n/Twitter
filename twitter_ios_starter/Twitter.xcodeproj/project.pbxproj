@@ -78,16 +78,16 @@
 		6EBCF52421DF07FC00451C03 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
-				6032C38C28E7BC5900AA4820 /* LoginViewController.swift */,
-				6EBCF52521DF07FC00451C03 /* AppDelegate.swift */,
+				6EBCF54D21E71F9400451C03 /* Launch Screen.storyboard */,
 				6EBCF52921DF07FC00451C03 /* Main.storyboard */,
+				6EBCF54321E047A500451C03 /* TwitterAPICaller.swift */,
+				6EBCF52521DF07FC00451C03 /* AppDelegate.swift */,
+				6032C38E28E7C78A00AA4820 /* HomeTableTableViewController.swift */,
+				6032C38C28E7BC5900AA4820 /* LoginViewController.swift */,
+				6032C39028E7DD6400AA4820 /* TweetCellTableViewCell.swift */,
+				606636DF28E8CF580079FDE7 /* TweetViewController.swift */,
 				37D29B8521F90E3400984A88 /* Assets.xcassets */,
 				6EBCF53121DF07FE00451C03 /* Info.plist */,
-				6EBCF54321E047A500451C03 /* TwitterAPICaller.swift */,
-				6032C38E28E7C78A00AA4820 /* HomeTableTableViewController.swift */,
-				6032C39028E7DD6400AA4820 /* TweetCellTableViewCell.swift */,
-				6EBCF54D21E71F9400451C03 /* Launch Screen.storyboard */,
-				606636DF28E8CF580079FDE7 /* TweetViewController.swift */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";

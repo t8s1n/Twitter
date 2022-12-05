@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="ELX-fH-Ere">
             <objects>
-                <viewController id="KpH-RF-heD" customClass="LoginViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="KpH-RF-heD" customClass="LoginViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C1C-Aj-6Z6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,16 +31,17 @@
                                     <action selector="onLoginButton:" destination="KpH-RF-heD" eventType="touchUpInside" id="YIU-hd-N80"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="TwitterLogoBlue" translatesAutoresizingMaskIntoConstraints="NO" id="bZC-pU-BWj">
-                                <rect key="frame" x="123" y="223" width="128" height="158"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="TwitterLogoBlue" translatesAutoresizingMaskIntoConstraints="NO" id="bZC-pU-BWj">
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nj6-xt-hpH"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="bZC-pU-BWj" firstAttribute="centerX" secondItem="C1C-Aj-6Z6" secondAttribute="centerX" id="Cdm-eO-2ni"/>
                             <constraint firstItem="Lqy-0H-yP6" firstAttribute="centerY" secondItem="C1C-Aj-6Z6" secondAttribute="centerY" id="Djc-Sa-TpU"/>
                             <constraint firstItem="Lqy-0H-yP6" firstAttribute="centerX" secondItem="C1C-Aj-6Z6" secondAttribute="centerX" id="Euq-mc-EWo"/>
+                            <constraint firstItem="bZC-pU-BWj" firstAttribute="centerY" secondItem="C1C-Aj-6Z6" secondAttribute="centerY" id="jft-KP-iNM"/>
                         </constraints>
                     </view>
                     <connections>
@@ -54,7 +55,7 @@
         <!--Home-->
         <scene sceneID="8iu-uo-ZAQ">
             <objects>
-                <tableViewController id="Cjb-pc-ra6" customClass="HomeTableTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" id="Cjb-pc-ra6" customClass="HomeTableTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="43M-FG-Qv4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,6 +79,18 @@
                                             <rect key="frame" x="89" y="11" width="82" height="22"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8og-6g-a6v">
+                                            <rect key="frame" x="161.5" y="11" width="39.5" height="18"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                            <color key="textColor" systemColor="systemGray2Color"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqw-om-Txl">
+                                            <rect key="frame" x="204" y="11" width="40" height="18"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                            <color key="textColor" systemColor="systemGray2Color"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweet content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ky-4e-H6t">
@@ -116,13 +129,18 @@
                                         <constraint firstItem="6ky-4e-H6t" firstAttribute="trailing" secondItem="ugR-Uw-OSi" secondAttribute="trailingMargin" id="4HB-dD-lj2"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="xGh-or-wgb" secondAttribute="bottom" constant="10" id="4kZ-x0-uQv"/>
                                         <constraint firstItem="jzY-1X-qWk" firstAttribute="leading" secondItem="jkb-gY-S2O" secondAttribute="trailing" constant="8" id="67b-zN-CGZ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="jqw-om-Txl" secondAttribute="trailing" constant="115" id="Isl-J9-GfZ"/>
+                                        <constraint firstItem="8og-6g-a6v" firstAttribute="leading" secondItem="jzY-1X-qWk" secondAttribute="trailing" constant="4" id="JaD-WA-A9K"/>
                                         <constraint firstItem="6ky-4e-H6t" firstAttribute="leading" secondItem="jkb-gY-S2O" secondAttribute="trailing" constant="8" id="LRP-aP-H7L"/>
                                         <constraint firstItem="FpI-Ac-pvB" firstAttribute="top" secondItem="6ky-4e-H6t" secondAttribute="bottom" constant="10" id="RKs-ia-dCc"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="FpI-Ac-pvB" secondAttribute="bottom" constant="10" id="axp-6N-EEU"/>
+                                        <constraint firstItem="8og-6g-a6v" firstAttribute="top" secondItem="ugR-Uw-OSi" secondAttribute="topMargin" id="de0-Yl-fnC"/>
                                         <constraint firstItem="jkb-gY-S2O" firstAttribute="leading" secondItem="ugR-Uw-OSi" secondAttribute="leadingMargin" id="hF1-ub-GXx"/>
                                         <constraint firstItem="6ky-4e-H6t" firstAttribute="top" secondItem="ugR-Uw-OSi" secondAttribute="topMargin" constant="18" id="kyY-nZ-5QD"/>
                                         <constraint firstItem="FpI-Ac-pvB" firstAttribute="leading" secondItem="xGh-or-wgb" secondAttribute="trailing" constant="10" id="m0n-9Z-mfo"/>
+                                        <constraint firstItem="jqw-om-Txl" firstAttribute="top" secondItem="ugR-Uw-OSi" secondAttribute="topMargin" id="o38-Db-uwn"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="FpI-Ac-pvB" secondAttribute="trailing" constant="10" id="oco-hy-Pet"/>
+                                        <constraint firstItem="jqw-om-Txl" firstAttribute="leading" secondItem="8og-6g-a6v" secondAttribute="trailing" constant="3" id="pXY-cP-3kT"/>
                                         <constraint firstItem="jkb-gY-S2O" firstAttribute="top" secondItem="ugR-Uw-OSi" secondAttribute="topMargin" id="wJ0-3s-bZa"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -130,6 +148,8 @@
                                     <outlet property="greyFavButton" destination="FpI-Ac-pvB" id="tyd-pV-BTV"/>
                                     <outlet property="greyRetButton" destination="xGh-or-wgb" id="G8i-hN-Tz3"/>
                                     <outlet property="profileImageView" destination="jkb-gY-S2O" id="LKr-Pb-fDd"/>
+                                    <outlet property="screenNameLabel" destination="8og-6g-a6v" id="7pJ-kN-hYj"/>
+                                    <outlet property="timeStampLabel" destination="jqw-om-Txl" id="5V9-rA-hRo"/>
                                     <outlet property="tweetContent" destination="6ky-4e-H6t" id="sJn-eF-kkh"/>
                                     <outlet property="userNameLabel" destination="jzY-1X-qWk" id="xb3-J6-Pmf"/>
                                 </connections>
@@ -162,7 +182,7 @@
         <!--Tweet View Controller-->
         <scene sceneID="da8-UF-a3g">
             <objects>
-                <viewController id="o74-lv-Cbs" customClass="TweetViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="o74-lv-Cbs" customClass="TweetViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vmw-32-DN9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -270,6 +290,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

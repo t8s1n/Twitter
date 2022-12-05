@@ -11,6 +11,7 @@ import BDBOAuth1Manager
 
 class TwitterAPICaller: BDBOAuth1SessionManager {    
     static let client = TwitterAPICaller(baseURL: URL(string: "https://api.twitter.com"), consumerKey: "DKtfzKjrhGKde5A74EFyP2ZJw", consumerSecret: "fE3rorTf7OHwiDoiO3Qzg6ynpTymsNQZVuqGvn9NVYZrtIMloN")
+    
     var loginSuccess: (() -> ())?
     var loginFailure: ((Error) -> ())?
     
@@ -55,24 +56,6 @@ class TwitterAPICaller: BDBOAuth1SessionManager {
             failure(error)
         })
     }
-/*
-    func postRequest(url: String, parameters: [Any], success: @escaping () -> (), failure: @escaping (Error) -> ()){
-        TwitterAPICaller.client?.post(url, parameters: parameters, progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
-            success()
-        }, failure: { (task: URLSessionDataTask?, error: Error) in
-            failure(error)
-        })
-    }
-    
-    func postTweet(tweetString:String, success: @escaping () -> (), failure: @escaping (Error) -> ()){
-        let url = "http://api.twitter.com/1.1/statuses/update.json"
-        TwitterAPICaller.client?.post(url, parameters: ["status":tweetString], progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
-            success()
-        }, failure: { (task: URLSessionDataTask?, error: Error) in
-            failure(error)
-        })
-    }
-    */
     
     func postRequest(url: String, parameters: [Any], success: @escaping () -> (), failure: @escaping (Error) -> ()){
         TwitterAPICaller.client?.post(url, parameters: parameters, progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
